@@ -13,6 +13,11 @@ class BarangController extends Controller
         return Helper::toJson($barang);
     }
 
+    public function getBarang2(){
+        $barang = Barang::orderBy("id", "desc")->get();
+        return Helper::toJson($barang);
+    }
+
     public function tambahBarang(Request $request)
     {
 
